@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export const Listing = ({ items = [] }) => (
   <div className="item-list">
     {items.map((item) => (
