@@ -1,6 +1,5 @@
 import React from 'react';
-import { Catalog } from './components/Catalog';
-
+import { Catalog } from './components/Catalog.tsx'
 
 function App() {
   return (

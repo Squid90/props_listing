@@ -1,8 +1,27 @@
 import React from 'react';
 
+interface Item {
+  listing_id: number;
+  url: string;
+  MainImage: any;
+  title: string;
+  currency_code: string;
+  price: string;
+  quantity: number;
+}
 
-export const Listing = ({ items = [] }) => (
+
+interface ListingProps {
+   items: Item[];
+}
+
+
+
+export const Listing: React.FC<ListingProps> = ({ items }) => (
+  
+  
   <div className="item-list">
+    
     {items.map((item) => (
       <div className="item" key={item.listing_id}>
         <div className="item-image">
@@ -18,5 +37,6 @@ export const Listing = ({ items = [] }) => (
       </div>
     ))}
   </div>
+  
 );
 
